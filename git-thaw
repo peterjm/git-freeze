@@ -8,4 +8,5 @@ if git rev-list HEAD -n1 --pretty="format:%s" | tail -n1 | grep "^WIP \[STAGED\]
   then
     git reset --soft HEAD^ > /dev/null
 fi
+rm .git-frozen
 git status --short

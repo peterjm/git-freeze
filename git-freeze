@@ -14,5 +14,6 @@ if [ $count -eq 0 ]
   then
     echo "nothing committed"
 else
+    touch .git-frozen
     git log -n$count --pretty=format:'%Cgreen%h %Cred%an%Creset: %s'
 fi
