@@ -6,7 +6,7 @@ if git commit -m "WIP [STAGED]" > /dev/null
     let count+=1
 fi
 git add --all .
-if git commit -am "WIP [UNSTAGED]" > /dev/null
+if git commit -aum "WIP [UNSTAGED]" > /dev/null
   then
     let count+=1
 fi
