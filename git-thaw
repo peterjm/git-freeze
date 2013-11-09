@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if git rev-list HEAD -n1 --pretty="format:%s" | tail -n1 | grep "^WIP \[UNSTAGED\]$" > /dev/null
+if git rev-list HEAD -n1 --pretty=oneline | grep "^WIP \[UNSTAGED\]$" > /dev/null
   then
     git reset HEAD^ > /dev/null
 fi
-if git rev-list HEAD -n1 --pretty="format:%s" | tail -n1 | grep "^WIP \[STAGED\]$" > /dev/null
+if git rev-list HEAD -n1 --pretty=oneline | grep "^WIP \[STAGED\]$" > /dev/null
   then
     git reset --soft HEAD^ > /dev/null
 fi
